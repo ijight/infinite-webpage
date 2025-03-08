@@ -1,4 +1,4 @@
-# Infinite Wiki
+# [Infinite Wiki](https://infinite-wiki.up.railway.app)
 
 An endless wiki-style page generator powered by Google's Gemini Pro AI. Each article generates links to new topics, creating an infinite web of connected nonsense.
 
@@ -17,6 +17,8 @@ An endless wiki-style page generator powered by Google's Gemini Pro AI. Each art
 4. Add environment variable:
    - `GEMINI_API_KEY`: Your Gemini API key
 5. To make the app public, click "Unexposed Service," generate a domain and add set the port to 8080.
+
+You can see mine at [infinite-wiki.up.railway.app](https://infinite-wiki.up.railway.app).
 
 ## Local Dev
 

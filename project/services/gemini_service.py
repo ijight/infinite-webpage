@@ -13,6 +13,16 @@ class GeminiService:
             raise ValueError("GEMINI_API_KEY environment variable is required")
         self.base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
         
+    def clean_response(self, text):
+        """Remove markdown code blocks from the response"""
+        # Remove ```html at start and ``` at end
+        text = text.strip()
+        if text.startswith('```html'):
+            text = text[7:]
+        if text.endswith('```'):
+            text = text[:-3]
+        return text.strip()
+        
     def generate_content(self, prompt):
         url = f"{self.base_url}?key={self.api_key}"
         
@@ -37,6 +47,8 @@ class GeminiService:
             data = response.json()
             if 'candidates' in data:
                 text = data['candidates'][0]['content']['parts'][0]['text']
+                # Clean the response before sending
+                text = self.clean_response(text)
                 yield f"data: {json.dumps({'token': text, 'progress': 90, 'status': 'generating'})}\n\n"
                 time.sleep(0.1)
                 yield f"data: {json.dumps({'token': '', 'progress': 100, 'status': 'complete'})}\n\n"
