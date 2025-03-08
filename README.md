@@ -20,4 +20,4 @@ An endless wiki-style page generator powered by Google's Gemini Pro AI. Each art
 
 ## Local Dev
 
-You can run the app locally by installing the dependencies and running the app.py file.
+You can run the app locally by installing the dependencies and running the app.py file. 
