@@ -1,0 +1,194 @@
+body {
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #202122;
+    line-height: 1.6;
+}
+
+.wiki-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.wiki-content {
+    background: white;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    border-bottom: 1px solid #a2a9b1;
+    font-size: 1.8em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.1em;
+}
+
+h2 {
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    border-bottom: 1px solid #a2a9b1;
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding-bottom: 0.1em;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+    border-bottom: 1px solid #0645ad33;
+    padding-bottom: 1px;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #0B0080;
+    border-bottom: 1px solid #0B0080;
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551A8B;
+    border-bottom-color: #551A8B33;
+}
+
+a:visited:hover {
+    color: #0B0080;
+    border-bottom-color: #0B0080;
+}
+
+a::after {
+    content: '›';
+    margin-left: 2px;
+    font-size: 1.1em;
+    opacity: 0.5;
+}
+
+a:hover::after {
+    opacity: 1;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.status-text {
+    font-size: 1.2em;
+    color: #333;
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#start-container {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+#start-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#start-container p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.start-input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#start-topic {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+#start-topic:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#start-topic::placeholder {
+    color: #999;
+}
+
+#start-button {
+    font-size: 1.2em;
+    padding: 15px 40px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #2980b9;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0 10px 0;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.progress-percent {
+    font-size: 1.1em;
+    color: #666;
+} 
