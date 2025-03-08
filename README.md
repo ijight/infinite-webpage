@@ -16,7 +16,7 @@ An endless wiki-style page generator powered by Google's Gemini Pro AI. Each art
 3. Select "Deploy from GitHub repo"
 4. Add environment variable:
    - `GEMINI_API_KEY`: Your Gemini API key
-5. Deploy!
+5. To make the app public, click "Unexposed Service," generate a domain and add set the port to 8080.
 
 ## Local Dev
 
